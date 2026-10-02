@@ -1,0 +1,35 @@
+const paths = {
+ menu: '<circle cx="5" cy="12" r="1"/><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/>',
+ home: '<path d="m3 10 9-7 9 7v10H14v-6h-4v6H3z"/>',
+ train: '<rect x="5" y="3" width="14" height="15" rx="4"/><path d="M5 10h14M12 3v7M8 21l2-3m6 3-2-3"/><path d="M8 14h1m6 0h1"/>',
+ walk: '<circle cx="13" cy="4" r="2"/><path d="m7 12 3-4 4 1 3 4h3m-10-5-1 7-4 6m5-7 5 3 1 4"/>',
+ pin: '<path d="M20 10c0 6-8 11-8 11S4 16 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/>',
+ clock: '<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>',
+ wallet: '<path d="M20 7H5a2 2 0 0 1 0-4h13v4M3 5v14a2 2 0 0 0 2 2h15V7m0 5h-6v5h6"/>',
+ leaf: '<path d="M20 3c1 10-2 17-9 17a7 7 0 0 1-7-7C4 6 12 7 20 3ZM4 21l11-11"/>',
+ calendar: '<rect x="3" y="5" width="18" height="16" rx="3"/><path d="M7 3v4m10-4v4M3 11h18m-13 4h2m4 0h2"/>',
+ right: '<path d="m9 5 7 7-7 7"/>',
+ back: '<path d="m12 5-7 7 7 7m-7-7h15"/>',
+ arrow: '<path d="M12 4v16m-5-5 5 5 5-5"/>',
+ qr: '<path d="M3 9V3h6m6 0h6v6m0 6v6h-6m-6 0H3v-6"/><rect x="7" y="7" width="3" height="3"/><rect x="14" y="7" width="3" height="3"/><path d="M7 14h3v3H7zm7 0h3v3m-3 3h6"/>',
+ battery: '<rect x="2" y="7" width="18" height="10" rx="2"/><path d="M23 10v4M6 10v4m4-4v4m4-4v4"/>',
+ lock: '<rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3m-4 5v2"/>',
+ unlock: '<rect x="5" y="10" width="14" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0m-4 8v2"/>',
+ check: '<path d="m5 12 4 4L19 6"/>',
+ circleCheck: '<circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/>',
+ ticket: '<path d="M3 6h18v4a2 2 0 0 0 0 4v4H3v-4a2 2 0 0 0 0-4Zm12 0v2m0 3v2m0 3v2"/>',
+ user: '<circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/>',
+ bell: '<path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9m-12 12h6"/>',
+ navigation: '<path d="m21 3-7 18-3-8-8-3Z"/>',
+ location: '<circle cx="12" cy="12" r="6"/><path d="M12 2v4m0 12v4M2 12h4m12 0h4"/>',
+ route: '<circle cx="6" cy="5" r="2"/><circle cx="18" cy="19" r="2"/><path d="M8 5h9a4 4 0 0 1 0 8H7a3 3 0 0 0 0 6h9"/>',
+ parking: '<rect x="3" y="3" width="18" height="18" rx="4"/><path d="M9 17V7h4a3 3 0 0 1 0 6H9"/>',
+ close: '<path d="m6 6 12 12M6 18 18 6"/>',
+ car: '<path d="m4 10 2-6h12l2 6M3 10h18v8H3zm2 8v3m14-3v3M6 14h2m8 0h2"/>',
+ comfort: '<path d="M5 12V7a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v5M3 11h4v6h10v-6h4v9H3zm3 9v2m12-2v2"/>',
+ speed: '<path d="M4 19a10 10 0 1 1 16 0M12 13l5-5"/><circle cx="12" cy="13" r="2"/>',
+ info: '<circle cx="12" cy="12" r="9"/><path d="M12 11v6m0-10v1"/>'
+};
+export const icon = (name, cls = '') => name === 'bike'
+ ? `<img class="icon bike-icon ${cls}" src="/assets/bike-blue.svg" alt="Sepeda listrik" width="24" height="24">`
+ : `<svg class="icon ${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[name] || paths.info}</svg>`;
